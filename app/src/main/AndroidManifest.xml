@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fzo.znwork">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".NewsApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_300x300"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_300x300"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.past.NewsPast"></activity>
+        <activity android:name=".ui.history.NewsHistory" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.detail.NewsDetailActivity" />
+        <activity android:name=".ui.main.NewsActivity" />
+    </application>
+
+</manifest>

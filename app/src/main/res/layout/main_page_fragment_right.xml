@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        顶部组件-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_platform_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/zhihu_160x160" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/platform_title_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="45dp"
+        app:menu_colorNormal="@color/design_default_color_background"
+        app:menu_colorPressed="@color/design_default_color_background"
+        app:menu_icon="@drawable/fab_menu_32x32"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time_32x32"
+            app:fab_colorNormal="@color/design_default_color_background"
+            app:fab_colorPressed="@color/design_default_color_background"
+            app:fab_label="浏览时长" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/history_32x32"
+            app:fab_colorNormal="@color/design_default_color_background"
+            app:fab_colorPressed="@color/design_default_color_background"
+            app:fab_label="浏览记录" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_past"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/past_32x32"
+            app:fab_colorNormal="@color/design_default_color_background"
+            app:fab_colorPressed="@color/design_default_color_background"
+            app:fab_label="历史今日" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
